@@ -1,0 +1,292 @@
+.checkout-layout {
+  min-height: 100vh;
+  background-color: #0F172A; /* Dark theme to simulate a gaming portal */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.store-header {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.store-header h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.user-bal {
+  font-size: 14px;
+  color: #94A3B8;
+}
+
+.user-bal strong {
+  color: #fff;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.checkout-card {
+  background: #1E293B;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item-icon {
+  font-size: 40px;
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.item-meta h2 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+}
+
+.item-meta p {
+  color: #94A3B8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.item-price {
+  margin-left: auto;
+  font-weight: 700;
+  color: #10B981;
+}
+
+.tp-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 24px 0;
+}
+
+/* TokenPay Widget Inside the Game */
+.tp-payment-widget {
+  background: linear-gradient(145deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.02) 100%);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.tp-widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tp-brand {
+  font-weight: 700;
+  color: #3B82F6;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+}
+
+.tp-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  padding: 4px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tp-description {
+  color: #94A3B8;
+  font-size: 13px;
+  margin: 0 0 20px 0;
+}
+
+.tp-pay-btn {
+  width: 100%;
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tp-pay-btn:hover:not(:disabled) {
+  background: #1D4ED8;
+  transform: translateY(-1px);
+}
+
+.tp-pay-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Hackathon Presenter Controls */
+.hackathon-controls {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255,255,255,0.1);
+}
+
+.hack-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F59E0B;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hack-row {
+  font-size: 13px;
+  color: #94A3B8;
+  margin-bottom: 8px;
+}
+
+.hack-row input[type="number"] {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+  text-align: right;
+}
+
+/* OTP Modal */
+.otp-card {
+  text-align: center;
+  border-top: 4px solid #DC2626;
+}
+
+.otp-icon-wrapper {
+  background: rgba(220, 38, 38, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.otp-card h2 {
+  margin: 0 0 12px 0;
+}
+
+.otp-desc {
+  color: #94A3B8;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.otp-input-group {
+  margin-bottom: 24px;
+}
+
+.otp-input-group input {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  padding: 16px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-family: monospace;
+}
+
+.otp-input-group input:focus {
+  border-color: #3B82F6;
+}
+
+.otp-input-group input.error-border {
+  border-color: #DC2626;
+}
+
+.error-text {
+  display: block;
+  color: #DC2626;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Success Card */
+.success-card {
+  text-align: center;
+  border-top: 4px solid #10B981;
+}
+
+.success-icon-wrapper {
+  background: rgba(16, 185, 129, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.success-card h2 {
+  margin: 0 0 12px 0;
+}
+
+.success-card p {
+  color: #94A3B8;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.receipt-box {
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.mt-2 { margin-top: 8px; }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.w-full { width: 100%; }

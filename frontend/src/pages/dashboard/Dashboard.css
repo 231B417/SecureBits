@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-family);
   background-color: var(--surface-gray);
   color: var(--neutral-dark);
 }
@@ -61,7 +61,7 @@ body {
 }
 
 .sidebar-logo h2 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--neutral-dark);
 }
@@ -81,7 +81,7 @@ body {
   border: none;
   border-radius: 8px;
   color: var(--neutral-mid);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -110,7 +110,8 @@ body {
 }
 
 .item-upgrade:hover {
-  background: rgba(217, 119, 6, 0.05); /* very light amber */
+  background: rgba(217, 119, 6, 0.05);
+  /* very light amber */
   color: var(--warning-amber);
 }
 
@@ -149,6 +150,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  font: 60px;
 }
 
 .org-name {
@@ -319,15 +321,23 @@ body {
   font-size: 14px;
 }
 
-.text-danger { color: var(--danger-red); }
-.text-amber { color: var(--warning-amber); }
-.font-bold { font-weight: 700; }
+.text-danger {
+  color: var(--danger-red);
+}
+
+.text-amber {
+  color: var(--warning-amber);
+}
+
+.font-bold {
+  font-weight: 700;
+}
 
 .api-key-box {
   background: var(--neutral-light);
   border-radius: 8px;
   padding: 16px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .key-label {
@@ -402,7 +412,8 @@ Hover state: subtle shadow lift
   border-radius: 12px;
   border: 1px solid var(--neutral-light);
   padding: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* very subtle default */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  /* very subtle default */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -431,7 +442,8 @@ Hover state: subtle shadow lift
 }
 
 .metric-value {
-  font-family: 'Inter', monospace; /* tabular approximation */
+  font-family: 'Inter', monospace;
+  /* tabular approximation */
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
   font-size: 32px;
@@ -448,10 +460,21 @@ Hover state: subtle shadow lift
   font-weight: 500;
 }
 
-.metric-trend.positive { color: var(--success-green); }
-.metric-trend.neutral { color: var(--neutral-mid); }
-.text-amber { color: var(--warning-amber); }
-.danger-text { color: var(--danger-red); }
+.metric-trend.positive {
+  color: var(--success-green);
+}
+
+.metric-trend.neutral {
+  color: var(--neutral-mid);
+}
+
+.text-amber {
+  color: var(--warning-amber);
+}
+
+.danger-text {
+  color: var(--danger-red);
+}
 
 /* Chart Placeholders inside cards */
 .chart-placeholder {
@@ -510,7 +533,30 @@ Hover state: subtle shadow lift
   background: var(--brand-primary);
   height: 100%;
 }
-.b1{height: 40%} .b2{height: 60%} .b3{height: 30%} .b4{height: 80%} .b5{height: 50%} .b6{height: 70%}
+
+.b1 {
+  height: 40%
+}
+
+.b2 {
+  height: 60%
+}
+
+.b3 {
+  height: 30%
+}
+
+.b4 {
+  height: 80%
+}
+
+.b5 {
+  height: 50%
+}
+
+.b6 {
+  height: 70%
+}
 
 .severity-blocks {
   display: flex;
@@ -520,8 +566,14 @@ Hover state: subtle shadow lift
   margin-top: 24px;
 }
 
-.sev-block.red { background: var(--danger-red); }
-.sev-block.amber { background: var(--warning-amber); border-left: 1px solid white;}
+.sev-block.red {
+  background: var(--danger-red);
+}
+
+.sev-block.amber {
+  background: var(--warning-amber);
+  border-left: 1px solid white;
+}
 
 /* Large Charts Area */
 .charts-grid {
@@ -576,6 +628,7 @@ Hover state: subtle shadow lift
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .charts-grid {
     grid-template-columns: 1fr;
   }
@@ -585,7 +638,9 @@ Hover state: subtle shadow lift
   .metrics-grid {
     grid-template-columns: 1fr;
   }
+
   .sidebar {
-    display: none; /* In PRD: hamburger menu on mobile */
+    display: none;
+    /* In PRD: hamburger menu on mobile */
   }
 }

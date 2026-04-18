@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --brand-primary: #2563EB;
@@ -21,13 +21,17 @@
   --surface-gray: #F9FAFB;
   --surface-dark: #0f172a;
   
-  --font-family: 'Inter', system-ui, sans-serif;
+  --font-family: 'Outfit', 'Inter', system-ui, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 115%; /* Global +15% — scales all rem/em values uniformly */
 }
 
 body {
@@ -53,10 +57,10 @@ body {
 }
 
 /* Typography */
-h1 { font-size: 32px; font-weight: 700; color: var(--brand-dark); }
-h2 { font-size: 24px; font-weight: 600; }
-h3 { font-size: 18px; font-weight: 600; }
-p { font-size: 14px; font-weight: 400; color: var(--neutral-mid); }
+h1 { font-size: 32px; font-weight: 700; color: var(--brand-dark); letter-spacing: -0.02em; line-height: 1.2; }
+h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.015em; }
+h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+p { font-size: 14px; font-weight: 400; color: var(--neutral-mid); line-height: 1.6; }
 .text-small { font-size: 12px; font-weight: 400; }
 
 /* Utilities */

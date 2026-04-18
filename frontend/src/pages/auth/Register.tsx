@@ -18,7 +18,7 @@ const Register: React.FC = () => {
     phone: '',
     industry: '',
   });
-  
+
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -81,8 +81,8 @@ const Register: React.FC = () => {
     <div className="auth-container">
       <div className="auth-card glass-card animate-fade-in" style={{ maxWidth: '540px', marginTop: '20px', marginBottom: '20px' }}>
         <div className="text-center mb-6">
-          <h1 style={{ fontSize: '28px' }}>Create Organization Account</h1>
-          <p className="mt-2" style={{ color: 'var(--neutral-mid)' }}>Join TokenPay and eliminate gateway fees context.</p>
+          <h1 style={{ fontSize: '40px', fontWeight: 800, marginBottom: '8px', letterSpacing: '-1px' }}>Merchant Sign Up</h1>
+          <p className="mt-2" style={{ color: 'var(--neutral-mid)' }}>Join SecureBits and eliminate gateway fees context.</p>
         </div>
 
         {error && (
@@ -110,7 +110,7 @@ const Register: React.FC = () => {
               <label className="form-label">Industry</label>
               <div style={{ position: 'relative' }}>
                 <Briefcase size={16} style={{ position: 'absolute', left: '12px', top: '12px', color: '#9CA3AF' }} />
-                <select 
+                <select
                   name="industry" className="form-input w-full"
                   style={{ paddingLeft: '36px', appearance: 'none', backgroundColor: 'white' }}
                   value={formData.industry} onChange={handleChange} required
@@ -200,10 +200,10 @@ const Register: React.FC = () => {
           )}
 
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '24px', gap: '10px' }}>
-            <input 
-              type="checkbox" id="terms" 
+            <input
+              type="checkbox" id="terms"
               checked={agreed} onChange={e => setAgreed(e.target.checked)}
-              style={{ marginTop: '3px', width: '16px', height: '16px', accentColor: 'var(--brand-primary)' }} 
+              style={{ marginTop: '3px', width: '16px', height: '16px', accentColor: 'var(--brand-primary)' }}
             />
             <label htmlFor="terms" style={{ fontSize: '14px', color: 'var(--neutral-mid)', cursor: 'pointer', lineHeight: '1.4' }}>
               I agree to the <span style={{ color: 'var(--brand-primary)', fontWeight: 500 }}>Terms of Service</span> and <span style={{ color: 'var(--brand-primary)', fontWeight: 500 }}>Privacy Policy</span>

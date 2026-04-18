@@ -2,12 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .database import engine
 from . import models
-from .routers import auth, dashboard, ai
+from .routers import auth, dashboard, ai, tokens, ledger, payment, admin
 
 # Create the database tables
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="TokenPay API Phase 1", version="1.0.0")
+app = FastAPI(title="SecureBits API Pro", version="1.0.0")
 
 # Setup CORS
 origins = [
@@ -29,7 +29,12 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(dashboard.router)
 app.include_router(ai.router)
+app.include_router(tokens.router)
+app.include_router(ledger.router)
+app.include_router(payment.router)
+app.include_router(admin.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to TokenPay Core API"}
+    return {"message": "Welcome to SecureBits Core API"}
+# force reload

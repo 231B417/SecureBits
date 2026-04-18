@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../../config';
 import React, { useState } from 'react';
 import { ShieldCheck, AlertTriangle, CheckCircle, ShieldAlert, CreditCard, ChevronRight } from 'lucide-react';
 import axios from 'axios';
@@ -20,7 +21,7 @@ export default function CheckoutDemo() {
     setLoading(true);
     try {
       // Ping the AI engine
-      const response = await axios.post('http://127.0.0.1:8000/api/fraud/analyze', {
+      const response = await axios.post(`${API_BASE_URL}/api/fraud/analyze`, {
         amount: aiAmount,
         is_vpn_proxy: aiProxy,
         device_age_days: aiProxy ? 0 : 150, // if proxy, pretend new device
